@@ -40,7 +40,8 @@ public class StudentController {
     }
 
     @PatchMapping
-    public ResponseEntity<StudentModel> updateStudent(@PathVariable Long id, @RequestBody StudentUpdateModel studentUpdateModel) {
+    public ResponseEntity<StudentModel> updateStudent(@PathVariable Long id,
+                                                      @RequestBody StudentUpdateModel studentUpdateModel) {
         return ResponseEntity.status(200).body(studentService.updateStudent(studentUpdateModel, id));
     }
 }

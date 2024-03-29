@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("/api")
 @RequiredArgsConstructor
 public class TeacherController {
 
@@ -40,7 +40,8 @@ public class TeacherController {
     }
 
     @PatchMapping
-    public ResponseEntity<TeacherModel> updateTeacher(@PathVariable Long id, @RequestBody TeacherUpdateModel teacherUpdateModel) {
+    public ResponseEntity<TeacherModel> updateTeacher(@PathVariable Long id,
+                                                      @RequestBody TeacherUpdateModel teacherUpdateModel) {
         return ResponseEntity.status(200).body(teacherService.updateTeacher(teacherUpdateModel, id));
     }
 }

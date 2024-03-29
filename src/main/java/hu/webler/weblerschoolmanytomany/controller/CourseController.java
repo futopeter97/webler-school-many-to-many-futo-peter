@@ -40,7 +40,8 @@ public class CourseController {
     }
 
     @PatchMapping("/courses/{id}")
-    public ResponseEntity<CourseModel> updateCourse(@PathVariable Long id, @RequestBody CourseUpdateModel courseUpdateModel) {
+    public ResponseEntity<CourseModel> updateCourse(@PathVariable Long id,
+                                                    @RequestBody CourseUpdateModel courseUpdateModel) {
         return ResponseEntity.status(200).body(courseService.updateCourse(courseUpdateModel, id));
     }
 }
