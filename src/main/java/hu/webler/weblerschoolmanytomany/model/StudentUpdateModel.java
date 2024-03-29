@@ -9,7 +9,6 @@ import lombok.Setter;
 
 import java.util.List;
 
-
 @Getter
 @Setter
 @AllArgsConstructor
@@ -19,8 +18,8 @@ public class StudentUpdateModel {
     private String firstName;
     private String midName;
     private String lastName;
-    private String phone;
     private String email;
+    private String phone;
     private Status status;
     private List<Course> courses;
 }
