@@ -18,6 +18,7 @@ public class CourseMapper {
         courseModel.setEndDate(course.getEndDate());
         courseModel.setSchool(course.getSchool());
         courseModel.setTeacher(course.getTeacher());
+        courseModel.setStudents(course.getStudents());
         return courseModel;
     }
 
