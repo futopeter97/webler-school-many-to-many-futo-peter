@@ -43,5 +43,14 @@ public class SchoolService {
     }
 
     public void deleteSchool(Long id) {
+        findSchoolById(id);
+        schoolRepository.deleteById(id);
+    }
+
+    public SchoolModel updateSchool(SchoolUpdateModel schoolUpdateModel, Long id) {
+        School school = findSchoolById(id);
+        SchoolMapper.mapSchoolUpdateModelToSchoolEntity(school, schoolUpdateModel);
+        school = schoolRepository.save(school);
+        return SchoolMapper.mapSchoolEntityToSchoolModel(school);
     }
 }
