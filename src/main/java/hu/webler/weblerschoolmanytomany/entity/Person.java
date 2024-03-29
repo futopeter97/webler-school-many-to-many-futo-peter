@@ -1,13 +1,13 @@
 package hu.webler.weblerschoolmanytomany.entity;
 
 import hu.webler.weblerschoolmanytomany.entity.base.Identifier;
-import jakarta.persistence.Entity;
+import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
-@Entity
+@MappedSuperclass
 @Getter
 @Setter
 public class Person extends Identifier {
@@ -17,5 +17,5 @@ public class Person extends Identifier {
     private String lastName;
     private String phone;
     private String email;
-    private LocalDateTime dateOfBirth;
+    private LocalDate dateOfBirth;
 }
