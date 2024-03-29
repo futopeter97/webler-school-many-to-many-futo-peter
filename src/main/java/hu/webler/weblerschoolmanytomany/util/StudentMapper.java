@@ -18,6 +18,7 @@ public class StudentMapper {
         studentModel.setEmail(student.getEmail());
         studentModel.setPhone(student.getPhone());
         studentModel.setDateOfBirth(student.getDateOfBirth());
+        studentModel.setCourses(student.getCourses());
         return studentModel;
     }
 
@@ -38,8 +39,8 @@ public class StudentMapper {
         Optional.ofNullable(studentUpdateModel.getLastName()).ifPresent(student::setLastName);
         Optional.ofNullable(studentUpdateModel.getEmail()).ifPresent(student::setEmail);
         Optional.ofNullable(studentUpdateModel.getPhone()).ifPresent(student::setPhone);
-        Optional.ofNullable(studentUpdateModel.getCourses()).ifPresent(student::setCourses);
         Optional.ofNullable(studentUpdateModel.getStatus()).ifPresent(student::setStatus);
+        Optional.ofNullable(studentUpdateModel.getCourses()).ifPresent(student::setCourses);
     }
 
     public StudentMapper() {
