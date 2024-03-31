@@ -39,7 +39,7 @@ public class TeacherController {
         return ResponseEntity.status(204).build();
     }
 
-    @PatchMapping
+    @PatchMapping("/teacher/{id}")
     public ResponseEntity<TeacherModel> updateTeacher(@PathVariable Long id,
                                                       @RequestBody TeacherUpdateModel teacherUpdateModel) {
         return ResponseEntity.status(200).body(teacherService.updateTeacher(teacherUpdateModel, id));
